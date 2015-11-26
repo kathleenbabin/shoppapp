@@ -6,9 +6,6 @@ var app = angular.module('shopApp',[
 	]);
 
 
-app.factory('$upload', ['$upload', function ($upload) {
-
-}]);
 app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
 	
 	$urlRouterProvider.otherwise('/');
@@ -24,17 +21,14 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
 			}
 		}
 	})
+	//WRITE A STATE CALLED ADMIN
+	//IT SHOULD LOOK SIMILIAR TO SHOP
+	//BUT IT SHOULD LOAD THE admin.html PARTIAL
+	/*
+		.state('admin',{
 
-	.state('admin',{
-		url:'/admin',
-		templateUrl:'logic/partials/admin.html',
-		controller:'AdminCtrl as ctrl',
-		resolve:{
-			products:function(productSrv){
-				return productSrv.getProducts();
-			}
-		}
-	})
+		});
+	*/
 
 	.state('admin.dash',{
 		url:'/dashboard',

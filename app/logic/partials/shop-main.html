@@ -27,16 +27,18 @@
 		<!-- Grid sizer for a fluid Isotope (Masonry) layout -->
 		<div class="grid__sizer"></div>
 		<!-- Grid items -->
-		<div class="grid__item {{product.category}}" ng-repeat="product in ctrl.products">
+
+		<!-- ADD NG REPEAT HERE AND ASSIGN CATEGORY -->
+		<div class="grid__item [[category]]">
 			
 			<div class="inner__border">
 				<div class="slider">
-					<div class="slider__item"><img src="{{product.image}}" alt="Dummy" /></div>
+					<div class="slider__item"><img src="" alt="Dummy" /></div>
 				</div>
 				<div class="meta">
-					<h3 class="meta__title">{{product.name}}</h3>
-					<span class="meta__brand">{{product.description}}</span>
-					<span class="meta__price">${{product.price}}</span>
+					<h3 class="meta__title"></h3>
+					<span class="meta__brand"></span>
+					<span class="meta__price">$</span>
 				</div>
 				<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
 			</div>

@@ -31,10 +31,8 @@ AdminCtrl.prototype.editProduct = function(product){
 	ctrl.state.go('admin.edit_product',{productId:product.id});
 }
 
-AdminCtrl.prototype.logout = function(){
-	var ctrl =this;
-	localStorage.removeItem('authToken');
+/*
+	WRITE A LOGOUT FUNCTION THAT SENDS THE USER BACK TO
+	THE AUTH PAGE AND DELTES THE TOKEN FROM LOCAL STORAGE
+*/
 
-	ctrl.state.go('auth');
-
-}

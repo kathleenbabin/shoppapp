@@ -15,6 +15,9 @@ function ProductCtrl($scope,$stateParams,productSrv,FileUploader){
 	ctrl.product = {};
 	ctrl.product_update_btn = 'Update Product';
 	ctrl.product_delete_btn = 'Remove Product';
+	
+
+
 	if($stateParams.productId != undefined){
 		productSrv.getProduct($stateParams.productId)
 		.then(function(res){
@@ -37,21 +40,15 @@ ProductCtrl.prototype.addProduct = function(){
 		price:ctrl.price,
 		quantity:ctrl.quantity,
 	}
-	ctrl.productSrv.addProduct(product);
+	
+	//CALL API TO ADD PRODUCT
 }
 
 ProductCtrl.prototype.updateProduct = function(){
 	var ctrl = this;
 
-	var product = {
-		name:ctrl.product.name,
-		image:ctrl.product.image,
-		description:ctrl.product.description,
-		category:ctrl.product.category,
-		price:ctrl.product.price,
-		quantity:ctrl.product.quantity,
-	}
-	ctrl.product_update_btn = 'Updating';
+	//CREATE PRODUCT AND SEND TO UPDATE
+
 	ctrl.productSrv.updateProduct(product,ctrl.product.id);
 }
 
@@ -59,7 +56,7 @@ ProductCtrl.prototype.deleteProduct = function(){
 	var ctrl = this;
 
 	ctrl.product_delete_btn = 'Removing';
-	ctrl.productSrv.deleteProduct(ctrl.product.id);
+	//DELETE PRODUCT CODE
 }
 
 

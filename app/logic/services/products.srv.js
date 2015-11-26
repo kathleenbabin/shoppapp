@@ -53,13 +53,7 @@ ProductService.prototype.deleteProduct = function(productId){
 	var _this = this;
 	this.api.request('/products/'+productId,{},'DEL')
 	.then(function(res){
-		console.log(res);
-		if(res.status === 200){
-			//product was deleted successfully
-			_this.removeProduct(productId);
-			_this.state.go('admin.dash');
-			
-		}
+		//WRITE PROMISE CODE
 	})
 }
 
@@ -82,9 +76,7 @@ ProductService.prototype.updateProductList = function(product,productId){
 }
 
 ProductService.prototype.removeProduct = function(productId){
-	for(index in this.products){
-		if(this.products[index].id == productId){
-			delete this.products[index];
-		}
-	}
+	//ONCE A PRODUCT HAS BEEN DELETED REMOVE IT FROM 
+	//THE PRODUCTS LIST
+
 }

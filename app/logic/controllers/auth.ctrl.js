@@ -28,7 +28,9 @@ AuthCtrl.prototype.login = function(){
 		if(res.status == 200){
 			//user exists
 			if(res.data.user != null){
-				localStorage.authToken = res.data.token;
+				//CHECK RESPONSE FOR TOKEN
+				//RECORD IT IN LOCAL STORAGE
+
 				ctrl.state.go('admin.dash');
 			}
 		}
