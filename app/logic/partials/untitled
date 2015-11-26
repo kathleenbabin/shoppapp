@@ -1,0 +1,32 @@
+<h3>
+	Edit Product
+</h3>
+
+<article class="add-product">
+	<form name="add-product" ng-submit="ctrl.addProduct()">
+		<div>
+			<label>Name</label>
+			<input type="text" name="name" ng-model="ctrl.name" required>
+		</div>
+		<div>
+			<label>Description</label>
+			<textarea type="text" name="name" ng-model="ctrl.description" required></textarea>
+		</div>
+		<div>
+			<label>Category</label>
+			<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
+			</select>
+		</div>
+		<div>
+			<label>Price</label>
+			<input type="number" name="price" ng-model="ctrl.price" required>
+		</div>
+		<div>
+			<label>Quantity</label>
+			<input type="number" name="quantity" ng-model="ctrl.quantity" required>
+		</div>
+		<div>
+			<button type="submit">Add Product</button>
+		</div>
+	</form>
+</article>

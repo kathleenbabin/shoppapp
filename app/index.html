@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- App Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/css/skeleton.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/fonts/pixelfabric-clothes/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/_ui.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/auth.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/admin.css">
+
+	<title>Shop App</title>
+
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+
+	<!-- Vendor -->
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="assets/js/_ui.js"></script>
+
+
+	<!-- App Controllers -->
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="logic/controllers/shop.ctrl.js"></script>
+	<script type="text/javascript" src="logic/controllers/admin.ctrl.js"></script>
+	<script type="text/javascript" src="logic/controllers/auth.ctrl.js"></script>
+	<script type="text/javascript" src="logic/controllers/product.ctrl.js"></script>
+
+	<!-- App Services -->
+	<script type="text/javascript" src="logic/services/api.srv.js"></script>
+	<script type="text/javascript" src="logic/services/products.srv.js"></script>
+
+</head>
+<body ng-app="shopApp">
+
+	<div ui-view class="wrapper"></div>
+
+</body>
+</html>
