@@ -12,7 +12,7 @@ function AuthCtrl($state,api){
 
 }
 
-AuthCtrl.prototype.login = function(){
+AuthCtrl.prototype.login = function(email, password){
 	var ctrl = this;
 
 	var payload = {
@@ -30,7 +30,7 @@ AuthCtrl.prototype.login = function(){
 			if(res.data.user != null){
 				//CHECK RESPONSE FOR TOKEN
 				//RECORD IT IN LOCAL STORAGE
-
+				localStorage.authToken = res.data.authToken;
 				ctrl.state.go('admin.dash');
 			}
 		}

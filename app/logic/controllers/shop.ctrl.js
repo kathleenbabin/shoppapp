@@ -1,6 +1,6 @@
 app.controller('ShopCtrl',ShopCtrl);
 
-function ShopCtrl($scope,products,api){
+function ShopCtrl($scope,products,api,productSrv){
 	var ctrl = this;
 	//dependencies
 	ctrl.api = api;
@@ -13,6 +13,7 @@ function ShopCtrl($scope,products,api){
     	return productSrv.products;
 	}, function (newValue) {
 	    ctrl.products = productSrv.products;
+	    //ctrl.initUI();
 	});
 	//ctrl.initUI();
 }

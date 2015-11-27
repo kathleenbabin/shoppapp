@@ -5,6 +5,7 @@ function AdminCtrl($scope,$state,$stateParams,products,productSrv){
 	ctrl.state = $state;
 	ctrl.productSrv = productSrv;
 
+	console.log(localStorage.authToken);
 	//check for token first
 	if(localStorage.authToken == null || localStorage.authToken == undefined){
 		$state.go('auth');
@@ -35,4 +36,13 @@ AdminCtrl.prototype.editProduct = function(product){
 	WRITE A LOGOUT FUNCTION THAT SENDS THE USER BACK TO
 	THE AUTH PAGE AND DELTES THE TOKEN FROM LOCAL STORAGE
 */
+AdminCtrl.prototype.logout = function(){
 
+	localStorage.removeItem('authToken');
+  	ctrl.state.go('auth');
+
+
+	// if(localStorage.authToken == null || localStorage.authToken == undefined){
+	// 	$state.go('auth');
+	// }
+}

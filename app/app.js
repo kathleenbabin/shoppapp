@@ -29,6 +29,16 @@ app.config(function($stateProvider, $httpProvider,$urlRouterProvider){
 
 		});
 	*/
+	.state('admin',{
+		url:'/admin',
+		templateUrl:'logic/partials/admin.html',
+		controller:'AdminCtrl as ctrl',
+		resolve:{
+			products:function(productSrv){
+				return productSrv.getProducts();
+			}
+		}
+	})
 
 	.state('admin.dash',{
 		url:'/dashboard',
